@@ -8,12 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class NavComponent implements OnInit {
   
   links:any
-
+  
   constructor() { 
     this.links = [
-      "Home",
-      "About"
+      "home",
+      "about"
     ]
+  }
+
+  capitalize( str){
+    return str[0].toUpperCase()+str.slice(1,str.length);
   }
 
   ngOnInit(): void {

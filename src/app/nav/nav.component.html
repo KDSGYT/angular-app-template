@@ -1,10 +1,15 @@
 <mat-toolbar color="primary">
-    <span> My App</span>
-    <ul *ngFor="let link of links">
-        <li>
-            <a href="#" mat-button-rasied>{{link}}</a>
-        </li>
-    </ul>
+    <span>AppName</span>
+    <div class="spacer"></div>
+    <div *ngFor="let link of links" >
+        <!-- link for Nav HOME view -->
+        <a *ngIf="link === 'home'" href="#" mat-button routerLink="/">{{capitalize(link)}}</a>
+        <!-- Link for everything else view -->
+        <a *ngIf="link !== 'home';" href="#" mat-button routerLink="/{{link}}">{{capitalize(link)}}</a>
+        
+    </div>
+    <div class="spacer social"></div>
+
 </mat-toolbar>
 
 
