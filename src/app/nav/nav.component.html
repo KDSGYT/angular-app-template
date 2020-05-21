@@ -3,9 +3,9 @@
     <div class="spacer"></div>
     <div *ngFor="let link of links" >
         <!-- link for Nav HOME view -->
-        <a *ngIf="link === 'home'" href="#" mat-button routerLink="/">{{capitalize(link)}}</a>
+        <a (click)="activeLink()" id="{{link}}" *ngIf="link === 'home'" mat-button routerLink="/">{{capitalize(link)}}</a>
         <!-- Link for everything else view -->
-        <a *ngIf="link !== 'home';" href="#" mat-button routerLink="/{{link}}">{{capitalize(link)}}</a>
+        <a (click)="activeLink()" *ngIf="link !== 'home'" href="#" mat-button routerLink="/{{link}}">{{capitalize(link)}}</a>
         
     </div>
     <div class="spacer social"></div>

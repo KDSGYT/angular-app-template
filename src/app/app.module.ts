@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { MatIconModule } from '@angular/material/icon'
-import { MatCardModule, MatCard } from '@angular/material/card'
+import { MatCardModule } from '@angular/material/card'
+import { MatButtonModule } from '@angular/material/button'
 
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { AppRoutingModule } from './app-routing.module';
@@ -27,7 +28,8 @@ import { AboutComponent } from './about/about.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

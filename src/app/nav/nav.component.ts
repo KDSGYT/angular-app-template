@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser'
-import { MatIconRegistry } from '@angular/material/icon'
+
+// import { MatButtonModule } from '@angular/material/button'
 
 
 @Component({
@@ -10,20 +10,25 @@ import { MatIconRegistry } from '@angular/material/icon'
 })
 export class NavComponent implements OnInit {
   
-  links:any
+  links:any;
   constructor( ) { 
     this.links = [
-      "home",
-      "about"
+      "View 1",
+      "View 2"
     ]
   }
+  
+  activeLink(){
 
+  }
+  
      
   capitalize( str){
     return str[0].toUpperCase()+str.slice(1,str.length);
   }
 
   ngOnInit(): void {
+  // console.log(this.url);
   }
 
 }
